@@ -8,6 +8,9 @@ function App() {
     <div>
       <ProfilePage userData={userData} />
       <UserContext userData={userData} />
+      <UserContext.Provider value={userData}>
+        <UserProfile />
+      </UserContext.Provider>
     </div>
   );
 }

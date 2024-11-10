@@ -1,8 +1,8 @@
 import React, { useState, createContext } from "react";
-export const UserDataContext = createContext();
-import React from "react";
 import UserProfile from "./src/ProfilePage";
+export const UserDataContext = createContext();
 
+import React from "react";
 const [userData, setUserData] = useState({
   name: "Jane Doe",
   email: "jane.doe@example.com",
