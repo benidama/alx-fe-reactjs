@@ -1,11 +1,17 @@
 import React from "react";
-// import useRecipeStore from "./useRecipeStore";
-import { useRecipeStore } from "./recipeStore";
+import create from "zustand";
+
+const useRecipeStore = create((set) => ({
+  recipes: [],
+  addRecipe: (newRecipe) =>
+    set((state) => ({ recipes: [...state.recipes, newRecipe] })),
+  setRecipes: (recipes) => set({ recipes }),
+}));
 
 const recipeStore = () => {
   return (
     <div>
-      <useRecipeStore />
+      <p>{useRecipeStore}</p>
     </div>
   );
 };
