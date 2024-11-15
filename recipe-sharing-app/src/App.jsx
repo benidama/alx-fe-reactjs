@@ -5,6 +5,7 @@ import "./App.css";
 import AddRecipeForm from "./components/AddRecipeForm";
 import RecipeList from "./components/RecipeLis";
 import useRecipeStore from "./components/useRecipeStore";
+import RecipeDetails from "./components/RecipeDetails";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -34,6 +35,7 @@ function App() {
       <AddRecipeForm />
       <RecipeList />
       <useRecipeStore />
+      <RecipeDetails />
     </>
   );
 }
