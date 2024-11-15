@@ -6,6 +6,8 @@ import AddRecipeForm from "./components/AddRecipeForm";
 import RecipeList from "./components/RecipeLis";
 import useRecipeStore from "./components/useRecipeStore";
 import RecipeDetails from "./components/RecipeDetails";
+import EditRecipeForm from "./components/EditRecipeForm";
+import DeleteRecipeButton from "./components/DeleteRecipeButton";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,6 +38,8 @@ function App() {
       <RecipeList />
       <useRecipeStore />
       <RecipeDetails />
+      <EditRecipeForm />
+      <DeleteRecipeButton />
     </>
   );
 }
