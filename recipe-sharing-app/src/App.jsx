@@ -8,6 +8,7 @@ import useRecipeStore from "./components/useRecipeStore";
 import RecipeDetails from "./components/RecipeDetails";
 import EditRecipeForm from "./components/EditRecipeForm";
 import DeleteRecipeButton from "./components/DeleteRecipeButton";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -40,6 +41,16 @@ function App() {
       <RecipeDetails />
       <EditRecipeForm />
       <DeleteRecipeButton />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="blogs" element={<Blogs />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
