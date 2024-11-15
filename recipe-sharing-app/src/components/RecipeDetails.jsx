@@ -6,10 +6,10 @@ const RecipeDetails = ({ recipeId }) => {
     state.recipes.find((recipe) => recipe.id === recipeId)
   );
   const updateRecipe = useRecipeStore((ne) =>
-    ne.recipes.find((recipe) => recipe.id === reciped)
+    ne.recipes.update((recipe) => recipe.id === reciped)
   );
   const deleteRecipe = useRecipeStore((open) =>
-    open.recipes.find((recipe) => recipe.id === recipeCd)
+    open.recipes.delete((recipe) => recipe.id === recipeCd)
   );
 
   return (
