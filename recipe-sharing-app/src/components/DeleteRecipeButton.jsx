@@ -3,12 +3,14 @@ import { useRecipeStore } from "./recipeStore";
 
 const DeleteRecipeButton = () => {
   const deleteRecipe = useRecipeStore((state) => state.deleteRecipe);
+  const useNavigate = useRecipeStore((state) => state.useNavigate);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     deleteRecipe({ id: Date.now(), title, description });
+    useNavigate({ id: Date.now(), title, description });
     setTitle("");
     setDescription("");
   };
