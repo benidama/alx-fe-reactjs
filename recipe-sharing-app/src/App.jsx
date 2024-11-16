@@ -8,6 +8,7 @@ import useRecipeStore from "./components/useRecipeStore";
 import RecipeDetails from "./components/RecipeDetails";
 import EditRecipeForm from "./components/EditRecipeForm";
 import DeleteRecipeButton from "./components/DeleteRecipeButton";
+import SearchBar from "./components/SearchBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <RecipeDetails />
       <EditRecipeForm />
       <DeleteRecipeButton />
+      <SearchBar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
