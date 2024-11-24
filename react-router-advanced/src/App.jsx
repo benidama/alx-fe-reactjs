@@ -2,9 +2,10 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Profile from "./components/Profile";
+import ProtectedRoute from './src/components/profile';
 import ProtectedRoute from "./components/ProtectedRoute";
 import{BrowserRouter, Route, Routes} from react-router-dom
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -40,7 +41,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-     {/* Route path=", "/blog/:id BlogPost */}
+     Route path=", "/blog/:id BlogPost
       <Profile />
       <ProtectedRoute />
     </>
