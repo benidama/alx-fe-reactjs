@@ -4,6 +4,14 @@ function github(event) {
   event.preventDefault;
   document.getElementById("name").target.value;
 }
+
+const file = axios.create("https://api.github.com/users/{username}");
+async function fetchUserData() {
+  let x = await fetch(file);
+  let y = await x.text();
+  document.getElementById("demo").innerHTML = y;
+}
+
 const Search = () => {
   const [form, setForm] = useState("good");
   const avatar_url = "My data";
