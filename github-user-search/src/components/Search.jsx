@@ -17,14 +17,19 @@ const Search = () => {
   const avatar_url = "My data";
   return (
     <div>
-      <form action="">
-        <label htmlFor="">Enter your name</label>
+      <form action="" className="bg-teal-100 flex justify-center items-center">
+        <label htmlFor="" className="text-sm text-white">
+          Enter your name
+        </label>
         <input type="text" placeholder="your name" />
         <label htmlFor="email">{form}</label>
-        <p>Loading</p>
+        <input type="text" placeholder="enter your email" />
+        <p className="text-sm text-white">Loading</p>
         <img src="" alt="not found" />
-        <p>Looks like we cant find the user</p>
-        <button onSubmit={github}>login</button>
+        <p className="text-sm text-white">Looks like we cant find the user</p>
+        <button onSubmit={github} className="text-sm text-white">
+          login
+        </button>
       </form>
     </div>
   );
