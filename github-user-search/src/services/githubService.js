@@ -5,11 +5,15 @@ const file = axios.create("https://api.github.com/users/{username}");
 const query = "https://api.github.com/search/users?q={query}";
 async function fetchUserData() {
   let x = await fetch(file);
-  let req = await query;
   let y = await x.text();
   document.getElementById("demo").innerHTML = y;
 }
-let date = get;
+
+let location = get;
+function minRepos() {
+  return location;
+}
+
 const githubService = () => {
   return (
     <div>
