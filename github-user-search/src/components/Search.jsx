@@ -5,14 +5,18 @@ function github(event) {
   document.getElementById("name").target.value;
 }
 
-const file = axios.create("https://api.github.com/users/{username}");
+const html_url = axios.create("https://api.github.com/users/{username}");
 async function fetchUserData() {
-  let x = await fetch(file);
+  let x = await fetch(html_url);
   let y = await x.text();
   document.getElementById("demo").innerHTML = y;
 }
 
-const getData = file.map((a) => <li>{a} && "hi"</li>);
+let location = get;
+function minRepos() {
+  return location;
+}
+const getData = html_url.map((a) => <li>{a} && "hi"</li>);
 
 const Search = () => {
   const [form, setForm] = useState("good");
