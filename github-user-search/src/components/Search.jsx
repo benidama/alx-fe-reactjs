@@ -12,6 +12,8 @@ async function fetchUserData() {
   document.getElementById("demo").innerHTML = y;
 }
 
+const getData = file.map((a) => <li>{a} && "hi"</li>);
+
 const Search = () => {
   const [form, setForm] = useState("good");
   const avatar_url = "My data";
@@ -26,6 +28,7 @@ const Search = () => {
         <input type="text" placeholder="enter your email" />
         <p className="text-sm text-white">Loading</p>
         <img src="" alt="not found" />
+        <p>{getData}</p>
         <p className="text-sm text-white">Looks like we cant find the user</p>
         <button onSubmit={github} className="text-sm text-white">
           login
